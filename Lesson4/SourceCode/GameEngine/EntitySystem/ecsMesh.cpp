@@ -29,6 +29,26 @@ void register_ecs_mesh_systems(flecs::world &ecs)
       });
     });
 
+  ecs.system<const Mesh1>()
+      .each([&](flecs::entity e, const Mesh1& mesh1)
+          {
+              renderQuery.each([&](RenderEnginePtr re)
+                  {
+                      RenderProxy* renderProxy = new CubeRenderProxy1;
+                      re.ptr->GetRT()->EnqueueCommand(RC_CreateMesh1RenderObject, renderProxy);
+
+                      float position[3];
+                      position[0] = 0.0f;
+                      position[1] = 0.0f;
+                      position[2] = 0.0f;
+
+                      renderProxy->SetPosition(position);
+
+                      e.set(RenderProxyPtr{ renderProxy });
+                      e.remove<Mesh1>();
+                  });
+          });
+
   ecs.system<RenderProxyPtr, const Position>()
     .each([&](RenderProxyPtr &renderProxy, const Position &pos)
     {

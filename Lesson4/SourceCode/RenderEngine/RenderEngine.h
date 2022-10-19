@@ -27,6 +27,7 @@ public:
 private:
 	void Init();
 	void CreateCubeRenderObject(RenderProxy* renderProxy);
+	void CreateMeshRenderObject(RenderProxy* renderProxy);
 
 	HWND InitMainWindow(HINSTANCE hInstance);
 	HWND m_hwnd = nullptr;

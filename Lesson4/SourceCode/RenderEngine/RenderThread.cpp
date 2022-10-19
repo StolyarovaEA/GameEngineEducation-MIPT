@@ -62,6 +62,13 @@ void RenderThread::EnqueueCommand(ERenderCommand command, Args... args)
 				std::forward<Args>(args)...)
 		);
 		break;
+	case RC_CreateMesh1RenderObject:
+		m_commands[m_nFrameToFill].push_back(
+			new EnqueuedRenderCommand(
+				[this](RenderProxy* renderProxy) { m_pRenderEngine->CreateMeshRenderObject(renderProxy); },
+				std::forward<Args>(args)...)
+		);
+		break;
 	default:
 		assert(0);
 		break;

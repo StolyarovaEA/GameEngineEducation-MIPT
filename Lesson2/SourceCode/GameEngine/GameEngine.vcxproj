@@ -144,8 +144,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\SDKs\bgfx\lib\x64;$(SolutionDir)..\Bin\$(Configuration)$(Platform)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);RenderEngine.lib;bgfxDebug.lib;bimg_decodeDebug.lib;bimgDebug.lib;bxDebug.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\SDKs\bgfx\lib\x64;$(SolutionDir)..\Bin\$(Configuration)$(Platform)\;$(SolutionDir)\inih\lib\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);RenderEngine.lib;bgfxDebug.lib;bimg_decodeDebug.lib;bimgDebug.lib;bxDebug.lib;inih.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

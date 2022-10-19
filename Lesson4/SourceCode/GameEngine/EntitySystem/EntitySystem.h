@@ -3,6 +3,7 @@
 #include "flecs.h"
 #include "RenderEngine.h"
 #include "../InputHandler.h"
+#include <vector>
 
 class EntitySystem
 {

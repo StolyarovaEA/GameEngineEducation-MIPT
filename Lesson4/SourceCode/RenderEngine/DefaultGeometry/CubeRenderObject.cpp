@@ -5,3 +5,9 @@ CubeRenderObject::CubeRenderObject(RenderProxy* pRenderProxy) :
 {
 	
 }
+
+CubeRenderObject1::CubeRenderObject1(RenderProxy* pRenderProxy) :
+	RenderObject(pRenderProxy)
+{
+
+}

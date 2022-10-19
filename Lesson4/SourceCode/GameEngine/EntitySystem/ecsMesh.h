@@ -2,6 +2,7 @@
 #include "flecs.h"
 
 struct CubeMesh {};
+struct Mesh1 {};
 struct RenderProxyPtr
 {
 	class RenderProxy* ptr;
