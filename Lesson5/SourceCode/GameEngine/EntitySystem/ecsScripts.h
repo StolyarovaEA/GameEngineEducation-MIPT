@@ -3,14 +3,7 @@
 #include <string>
 #include <memory>
 #include "flecs.h"
-#include "ecsSystems.h"
-#include "ecsPhys.h"
-#include "ecsControl.h"
-#include "ecsMesh.h"
-#include "../ScriptSystem/ScriptSystem.h"
-#include "../ScriptSystem/ScriptProxy.h"
-#include "../GameEngine/Input.h"
-#include "../GameEngine/InputHandler.h"
+
 
 class CScriptProxy;
 

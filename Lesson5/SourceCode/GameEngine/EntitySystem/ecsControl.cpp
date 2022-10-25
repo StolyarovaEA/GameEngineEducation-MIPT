@@ -6,6 +6,6 @@
 
 void register_ecs_control_systems(flecs::world &ecs)
 {
-  static auto inputQuery = ecs.query<InputHandlerPtr>();
+	;
 }
 

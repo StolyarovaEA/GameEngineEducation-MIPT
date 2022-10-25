@@ -5,6 +5,7 @@
 #include "IScriptProxy.h"
 
 
+
 class SCRIPTSYSTEM_API CScriptProxy final : public IScriptProxy
 {
 public:

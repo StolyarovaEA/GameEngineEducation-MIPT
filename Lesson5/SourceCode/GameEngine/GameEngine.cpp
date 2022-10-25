@@ -15,6 +15,7 @@
 #include "../ScriptSystem/ScriptSystem.h"
 
 
+
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -30,7 +31,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     RenderEngine* renderEngine = new RenderEngine(hInstance);
     RenderThread* renderThread = renderEngine->GetRT();
     InputHandler* inputHandler = new InputHandler();
-    CScriptSystem* scriptSystem = new CScriptSystem();
+    IScriptSystem* scriptSystem = new CScriptSystem();
 
     EntitySystem* entitySystem = new EntitySystem(renderEngine, inputHandler, scriptSystem);
 
@@ -50,8 +51,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         else
         {
             inputHandler->Update();
-            scriptSystem->Update(timer.DeltaTime());
             entitySystem->Update();
+            scriptSystem->Update(timer.DeltaTime());
 
             timer.Tick();
 

@@ -1,4 +1,13 @@
 #include "ecsScripts.h"
+#include "ecsSystems.h"
+#include "ecsPhys.h"
+#include "ecsControl.h"
+#include "ecsMesh.h"
+#include "../ScriptSystem/ScriptSystem.h"
+#include "../ScriptSystem/ScriptProxy.h"
+#include "../GameEngine/Input.h"
+#include "../GameEngine/InputHandler.h"
+
 
 
 void register_ecs_script_systems(flecs::world& ecs)
