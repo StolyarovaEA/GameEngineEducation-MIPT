@@ -11,13 +11,17 @@ InputHandler::InputHandler()
 
 	MapSymbol("a", 'A');
 	MapSymbol("d", 'D');
+	MapSymbol("s", 'S');
+	MapSymbol("w", 'W');
 	MapSymbol("left", VK_LEFT);
 	MapSymbol("right", VK_RIGHT);
 	MapSymbol("space", VK_SPACE);
 
 	MapCommandSymbol("GoLeft", eIC_GoLeft, "a");
 	MapCommandSymbol("GoRight", eIC_GoRight, "d");
-	MapCommandSymbol("Jump", eIC_Jump, "space");
+	MapCommandSymbol("GoUp", eIC_GoUp, "w");
+	MapCommandSymbol("GoDown", eIC_GoDown, "s");
+	MapCommandSymbol("Shoot", eIC_Shoot, "space");
 
 	LoadConfiguration();
 

@@ -1,0 +1,12 @@
+<entities>
+    <entity>
+        <position>-5.0 5.0 -15.0 </position>
+        <velocity>0.0 0.0 0.0 </velocity>
+        <ammo> 6 </ammo>
+        <recharge> 0.0 </recharge>
+        <friction> 0.9 </friction>
+        <speed> 1.0 </speed>
+        <cube_mesh/>
+        <control/>
+    </entity>
+</entities>

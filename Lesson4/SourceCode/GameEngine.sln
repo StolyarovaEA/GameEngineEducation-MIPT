@@ -4,10 +4,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "GameEngine\GameEngine.vcxproj", "{1D7BCD75-0366-4DFF-A508-61D7E0449937}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99B1EC67-7931-4F93-BAA9-23A6D3A5CE85} = {99B1EC67-7931-4F93-BAA9-23A6D3A5CE85}
+		{BE76A128-6104-464C-BC69-850CAB421605} = {BE76A128-6104-464C-BC69-850CAB421605}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderEngine", "RenderEngine\RenderEngine.vcxproj", "{99B1EC67-7931-4F93-BAA9-23A6D3A5CE85}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CE555BC-E029-4B96-9F60-75D7F69236AB} = {2CE555BC-E029-4B96-9F60-75D7F69236AB}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderBackend", "RenderBackend\RenderBackend.vcxproj", "{2CE555BC-E029-4B96-9F60-75D7F69236AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XmlReader", "XmlReader\XmlReader.vcxproj", "{BE76A128-6104-464C-BC69-850CAB421605}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +50,14 @@ Global
 		{2CE555BC-E029-4B96-9F60-75D7F69236AB}.Release|x64.Build.0 = Release|x64
 		{2CE555BC-E029-4B96-9F60-75D7F69236AB}.Release|x86.ActiveCfg = Release|Win32
 		{2CE555BC-E029-4B96-9F60-75D7F69236AB}.Release|x86.Build.0 = Release|Win32
+		{BE76A128-6104-464C-BC69-850CAB421605}.Debug|x64.ActiveCfg = Debug|x64
+		{BE76A128-6104-464C-BC69-850CAB421605}.Debug|x64.Build.0 = Debug|x64
+		{BE76A128-6104-464C-BC69-850CAB421605}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE76A128-6104-464C-BC69-850CAB421605}.Debug|x86.Build.0 = Debug|Win32
+		{BE76A128-6104-464C-BC69-850CAB421605}.Release|x64.ActiveCfg = Release|x64
+		{BE76A128-6104-464C-BC69-850CAB421605}.Release|x64.Build.0 = Release|x64
+		{BE76A128-6104-464C-BC69-850CAB421605}.Release|x86.ActiveCfg = Release|Win32
+		{BE76A128-6104-464C-BC69-850CAB421605}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
