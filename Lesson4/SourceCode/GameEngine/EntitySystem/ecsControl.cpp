@@ -4,10 +4,12 @@
 #include "ecsMesh.h"
 #include "flecs.h"
 #include "../InputHandler.h"
+#include "soundsystem.h"
 
 void register_ecs_control_systems(flecs::world& ecs)
 {
     static auto inputQuery = ecs.query<InputHandlerPtr>();
+    static auto sound = ecs.query<SoundSystemPtr>();
     ecs.system<Velocity, const Speed, const Controllable>()
         .each([&](flecs::entity e, Velocity& vel, const Speed& spd, const Controllable&)
             {
@@ -47,6 +49,11 @@ void register_ecs_control_systems(flecs::world& ecs)
                                         sh.val = false;
                                         a.val -= 1;
                                     }
+                                    sound.each([&](SoundSystemPtr snd)
+                                        {
+                                            snd.ptr->playsound("shoot");
+                                        }
+                                    );
                                 });
 
                         }

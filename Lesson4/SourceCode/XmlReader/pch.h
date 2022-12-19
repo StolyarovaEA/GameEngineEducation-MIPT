@@ -8,6 +8,7 @@
 #define PCH_H
 
 // Добавьте сюда заголовочные файлы для предварительной компиляции
+#pragma once
 #include "framework.h"
 #include <string>
 #include <vector>

@@ -1,6 +1,8 @@
 #include "ecsPhys.h"
 #include <stdlib.h>
 #include <ctime>
+#include "ecsSystems.h"
+#include "soundsystem.h"
 
 static float rand_flt(float from, float to)
 {
@@ -9,6 +11,12 @@ static float rand_flt(float from, float to)
 
 void register_ecs_phys_systems(flecs::world& ecs)
 {
+    static auto sound = ecs.query<SoundSystemPtr>();
+    sound.each([&](SoundSystemPtr snd)
+        {
+            snd.ptr->playsound("back");
+        }
+    );
     ecs.system<Velocity, const Gravity, BouncePlane*, Position*>()
         .each([&](flecs::entity e, Velocity& vel, const Gravity& grav, BouncePlane* plane, Position* pos)
             {
@@ -109,7 +117,13 @@ void register_ecs_phys_systems(flecs::world& ecs)
                             pos1.z = rand() % 10;
                             if (e1.get<bonus>())
                                 h.val = true;
+                            
                         }
+                        sound.each([&](SoundSystemPtr snd)
+                            {
+                                snd.ptr->playsound("hit");
+                            }
+                        );
                     });
             });
 

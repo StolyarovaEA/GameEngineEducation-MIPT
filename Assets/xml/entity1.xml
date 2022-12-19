@@ -1,0 +1,29 @@
+<entities>
+    <entity id="1">
+        <file>../../../Assets/sounds/SHOOT015.ogg</file>
+        <name>shoot </name>
+        <pitch>1.0 </pitch>
+        <gain>1.0 </gain>
+        <position>0.0 0.0 0.0 </position>
+        <velocity>0.0 0.0 0.0 </velocity>
+        <loop>false </loop>
+    </entity>
+    <entity id="2">
+        <file>../../../Assets/sounds/2.ogg</file>
+        <name>hit </name>
+        <pitch>1.0</pitch>
+        <gain>1.0</gain>
+        <position>0.0 0.0 0.0 </position>
+        <velocity>0.0 0.0 0.0 </velocity>
+        <loop>false </loop>
+    </entity>
+    <entity id="3">
+        <file>../../../Assets/sounds/Orbital Colossus.ogg</file>
+        <name>back </name>
+        <pitch>1.0</pitch>
+        <gain>1.0</gain>
+        <position>0.0 0.0 0.0 </position>
+        <velocity>0.0 0.0 0.0 </velocity>
+        <loop>true </loop>
+    </entity>
+</entities>

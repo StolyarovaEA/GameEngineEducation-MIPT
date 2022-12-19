@@ -5,13 +5,14 @@
 #define _CRTDBG_MAP_ALLOC
 #include <crtdbg.h>
 #endif
-
+#pragma once
 #include "GameEngine.h"
 #include "RenderEngine.h"
 #include "RenderThread.h"
 #include "GameTimer.h"
 #include "InputHandler.h"
 #include "EntitySystem/EntitySystem.h"
+#include "soundsystem.h"
 
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -29,8 +30,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     RenderEngine* renderEngine = new RenderEngine(hInstance);
     RenderThread* renderThread = renderEngine->GetRT();
     InputHandler* inputHandler = new InputHandler();
-
-    EntitySystem* entitySystem = new EntitySystem(renderEngine, inputHandler);
+    SoundSystem* soundsystem = new SoundSystem();
+    soundsystem->loadscene("../../../Assets/xml/entity1.xml");
+    EntitySystem* entitySystem = new EntitySystem(renderEngine, inputHandler, soundsystem);
 
     MSG msg = { 0 };
 

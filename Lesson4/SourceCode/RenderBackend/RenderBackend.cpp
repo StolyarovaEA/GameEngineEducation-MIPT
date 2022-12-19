@@ -23,7 +23,7 @@ void RenderBackend::Init()
 	bgfx::setViewRect(0, 0, 0, bgfx::BackbufferRatio::Equal);
 }
 
-void RenderBackend::SetWindowHandle(void* windowHandle)
+void RenderBackend::SetWindowHandle(void* windowHandle) 
 {
 	m_windowHandle = windowHandle;
 }

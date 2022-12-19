@@ -35,3 +35,6 @@ std::vector<XmlReader::EntityComponents> XmlReader::ParseFile()
     }
     return entities;
 }
+
+
+
